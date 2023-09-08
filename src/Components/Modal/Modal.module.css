@@ -1,0 +1,102 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  background: hsla(0, 0%, 15%, 0.3);
+  backdrop-filter: blur(0.3rem);
+}
+
+.modalCard {
+  max-width: 30rem;
+  padding: 1.5rem;
+  background: #7e7e7e;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  text-shadow: 0.1rem 0.1rem 0.3rem hsla(0, 0%, 13%, 0.8);
+  box-shadow: 0.3rem 0.3rem 0.7rem hsla(0, 0%, 13%, 0.8);
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+.cancel {
+  align-self: end;
+  cursor: not-allowed;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: fit-content;
+  padding-bottom: 3rem;
+}
+
+input {
+  border-radius: 0.3rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.3rem hsla(0, 0%, 13%, 0.8);
+}
+
+button {
+  width: 4rem;
+  height: 2rem;
+  line-height: 0;
+  border-radius: 0.3rem;
+  border: none;
+  transition: transform 200ms ease;
+  box-shadow: 0.1rem 0.1rem 0.3rem hsla(0, 0%, 13%, 0.8);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.cookiesWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.cookiesButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.cookiesButtons:hover {
+  flex-direction: row-reverse;
+}
+
+.cookieYes {
+  background: hsl(117, 100%, 35%);
+}
+
+.cookieNo {
+  background: hsl(0, 100%, 40%);
+}
+
+h3 {
+  width: 90%;
+}

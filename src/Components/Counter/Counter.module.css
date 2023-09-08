@@ -1,0 +1,13 @@
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  height: 100svh;
+}
+
+.image {
+  height: 20rem;
+}
