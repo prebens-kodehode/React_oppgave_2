@@ -1,6 +1,6 @@
 import { useState } from "react";
 import style from "./ImageComponent.module.css";
-import likeIcon from "../../assets/SVG/heart_dark.svg";
+import likeIcon from "../../assets/SVG/heart_light.svg";
 import likedIcon from "../../assets/SVG/heart_red.svg";
 
 interface ImageComponentProps {
@@ -19,10 +19,10 @@ const ImageComponent = ({ src, alt }: ImageComponentProps) => {
 
   return (
     <div className={style.imageComponent}>
-      <img src={src} alt={alt} />
+      <img className={style.image} src={src} alt={alt} />
       <div className={style.likeSection}>
-        <span>{likes}</span>
-        <button onClick={handleLike}>
+        <p>Likes: {likes}</p>
+        <button className={style.likeButton} onClick={handleLike}>
           <img src={isliked ? likedIcon : likeIcon} alt="like icon" />
         </button>
       </div>

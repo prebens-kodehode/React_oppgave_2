@@ -1,0 +1,8 @@
+.carousel {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  overflow-x: auto;
+  margin: 1rem;
+}

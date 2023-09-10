@@ -65,6 +65,7 @@ button {
   border: none;
   transition: transform 200ms ease;
   box-shadow: 0.1rem 0.1rem 0.3rem hsla(0, 0%, 13%, 0.8);
+  cursor: pointer;
 }
 
 button:active {

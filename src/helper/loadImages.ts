@@ -4,7 +4,7 @@ export const loadImages = async () => {
 
   for (const path in imageModules) {
     const module = (await imageModules[path]()) as { default: string };
-    images[path.replace("../images/", "")] = module.default;
+    images[path.replace("../assets/Images/", "")] = module.default;
   }
 
   return images;
