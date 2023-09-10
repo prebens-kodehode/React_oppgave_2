@@ -85,7 +85,9 @@ button:active {
   gap: 1rem;
 }
 
-.cookiesButtons:hover {
+.cookiesButtonsReverse {
+  display: flex;
+  gap: 1rem;
   flex-direction: row-reverse;
 }
 

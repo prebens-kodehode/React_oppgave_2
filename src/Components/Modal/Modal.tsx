@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import style from "./Modal.module.css";
 import cancel from "../../assets/SVG/cancel.svg";
 
-export function Modal() {
+interface ModalProps {
+  setFirstName: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export function Modal({ setFirstName }: ModalProps) {
   const [state, setState] = useState(1);
   const [modalVisible, setModalVisible] = useState(false);
   const [formInputs, setFormInputs] = useState({
@@ -11,11 +15,12 @@ export function Modal() {
     email: "",
     ssn: "",
   });
+  const [buttonRow, setRow] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setModalVisible(true);
-    }, 5000);
+    }, 5000000000);
 
     return () => {
       clearTimeout(timer);
@@ -37,6 +42,7 @@ export function Modal() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formInputs);
+    setFirstName(formInputs.fname);
     setState(2);
   };
 
@@ -102,7 +108,11 @@ export function Modal() {
         {state === 2 && (
           <div className={style.cookiesWrapper}>
             <h3>Accept all our cookies forever?</h3>
-            <div className={style.cookiesButtons}>
+            <div
+              className={
+                buttonRow ? style.cookiesButtons : style.cookiesButtonsReverse
+              }
+            >
               <button
                 className={style.cookieYes}
                 onClick={handleCookieButtonClick}
@@ -112,6 +122,7 @@ export function Modal() {
               <button
                 className={style.cookieNo}
                 onClick={handleCookieButtonClick}
+                onMouseEnter={() => setRow((prevState) => !prevState)}
               >
                 NO
               </button>
