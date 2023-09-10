@@ -31,7 +31,7 @@ export function Modal({ setFirstName }: ModalProps) {
     return null;
   }
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setFormInputs({
       ...formInputs,
@@ -39,7 +39,7 @@ export function Modal({ setFirstName }: ModalProps) {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log(formInputs);
     setFirstName(formInputs.fname);
