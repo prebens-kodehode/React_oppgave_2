@@ -12,6 +12,7 @@ header {
   position: sticky;
   top: 0;
   padding: 1rem 4rem;
+  background: hsl(0, 0%, 15%);
 }
 
 .logo {
@@ -45,4 +46,10 @@ header {
 
 .profilePicture h2 {
   margin-bottom: 0.15rem;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 1rem 2rem;
+  }
 }

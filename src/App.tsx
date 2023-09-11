@@ -34,7 +34,9 @@ function App() {
             ))}
           </Carousel>
         </main>
-        <footer></footer>
+        <footer>
+          <p>&copy; PrebenS</p>
+        </footer>
       </div>
       <Modal setFirstName={setFirstName} />
     </>

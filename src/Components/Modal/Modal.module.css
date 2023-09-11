@@ -3,9 +3,6 @@
   top: 0;
   left: 0;
   z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100dvh;
   background: hsla(0, 0%, 15%, 0.3);
@@ -17,10 +14,7 @@
   padding: 1.5rem;
   background: #7e7e7e;
   border-radius: 0.5rem;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 2rem;
   text-align: center;
   text-shadow: 0.1rem 0.1rem 0.3rem hsla(0, 0%, 13%, 0.8);
@@ -28,10 +22,7 @@
 }
 
 .formWrapper {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 2rem;
   text-align: center;
 }
@@ -73,10 +64,7 @@ button:active {
 }
 
 .cookiesWrapper {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 2rem;
   text-align: center;
 }
@@ -102,4 +90,13 @@ button:active {
 
 h3 {
   width: 90%;
+}
+
+.modal,
+.modalCard,
+.formWrapper,
+.cookiesWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
