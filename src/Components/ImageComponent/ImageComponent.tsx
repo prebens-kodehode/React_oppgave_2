@@ -6,9 +6,10 @@ import likedIcon from "../../assets/SVG/heart_red.svg";
 interface ImageComponentProps {
   src: string;
   alt: string;
+  fact: string;
 }
 
-const ImageComponent = ({ src, alt }: ImageComponentProps) => {
+const ImageComponent = ({ src, alt, fact }: ImageComponentProps) => {
   const [likes, setLikes] = useState(0);
   const [isliked, setIsLiked] = useState(false);
 
@@ -20,11 +21,17 @@ const ImageComponent = ({ src, alt }: ImageComponentProps) => {
   return (
     <div className={style.imageComponent}>
       <img className={style.image} src={src} alt={alt} />
-      <div className={style.likeSection}>
-        <p>Likes: {likes}</p>
-        <button className={style.likeButton} onClick={handleLike}>
-          <img src={isliked ? likedIcon : likeIcon} alt="like icon" />
-        </button>
+      <div className={style.imageComponentBottom}>
+        <div className={style.description}>
+          <h3 className={style.descriptionName}>{alt}</h3>
+          <p>{fact}</p>
+        </div>
+        <div className={style.likeSection}>
+          <p>{likes} likes</p>
+          <button className={style.likeButton} onClick={handleLike}>
+            <img src={isliked ? likedIcon : likeIcon} alt="like icon" />
+          </button>
+        </div>
       </div>
     </div>
   );

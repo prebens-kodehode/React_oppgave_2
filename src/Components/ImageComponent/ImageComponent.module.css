@@ -4,10 +4,16 @@
   border-radius: 0.5rem;
 }
 
-.likesSection {
+.imageComponentBottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.05rem;
+}
+
+.likeSection {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .likeButton {
@@ -15,4 +21,12 @@
   box-shadow: none;
   width: fit-content;
   height: fit-content;
+}
+
+.description {
+  width: 65%;
+}
+
+.descriptionName {
+  text-transform: capitalize;
 }

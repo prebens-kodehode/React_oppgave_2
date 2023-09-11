@@ -8,7 +8,9 @@ import { Modal } from "./Components/Modal/Modal";
 
 function App() {
   const [firstName, setFirstName] = useState("Anonymous");
-  const [imageData, setImageData] = useState<Record<string, string>>({});
+  const [imageData, setImageData] = useState<
+    Record<string, { src: string; fact: string }>
+  >({});
 
   useEffect(() => {
     (async () => {
@@ -22,11 +24,12 @@ function App() {
         <Header firstName={firstName} />
         <main>
           <Carousel>
-            {Object.entries(imageData).map(([key, src], index) => (
+            {Object.entries(imageData).map(([key, value], index) => (
               <ImageComponent
                 key={index}
-                src={src}
-                alt={key.replace(".webp", "")}
+                src={value.src}
+                alt={key}
+                fact={value.fact}
               />
             ))}
           </Carousel>
