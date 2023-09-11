@@ -1,4 +1,5 @@
 export const loadImages = async () => {
+  // importing all .webp images from the specified directory
   const imageModules = import.meta.glob("../assets/Images/*.webp");
 
   const animalFacts: Record<string, string> = {
@@ -26,14 +27,18 @@ export const loadImages = async () => {
     tiger: "Tigers have striped skin, not just striped fur.",
   };
 
+  // empty object to hold the image sources and facts
   const images: Record<string, { src: string; fact: string }> = {};
 
   for (const path in imageModules) {
+    // extracting the animal name from the file path
     const animalName = path
       .replace("../assets/Images/", "")
       .replace(".webp", "");
+    // importing the specific module for the current path (to get the default export which is the image src)
     const module = (await imageModules[path]()) as { default: string };
 
+    // adding a new property to the images object with the animal name as the key and an object with src and fact as the value
     images[animalName] = { src: module.default, fact: animalFacts[animalName] };
   }
   return images;

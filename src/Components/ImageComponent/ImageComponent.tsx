@@ -10,9 +10,13 @@ interface ImageComponentProps {
 }
 
 const ImageComponent = ({ src, alt, fact }: ImageComponentProps) => {
+  // state to hold the number of likes
   const [likes, setLikes] = useState(0);
+
+  // state to hold whether the image is liked or not
   const [isliked, setIsLiked] = useState(false);
 
+  // function to handle like button click
   const handleLike = () => {
     setIsLiked(!isliked);
     setLikes(isliked ? likes - 1 : likes + 1);

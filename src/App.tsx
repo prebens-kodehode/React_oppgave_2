@@ -7,11 +7,15 @@ import "./App.css";
 import { Modal } from "./Components/Modal/Modal";
 
 function App() {
+  // state to hold the first name, initialized to "Anonymous"
   const [firstName, setFirstName] = useState("Anonymous");
+
+  // state to hold the image data
   const [imageData, setImageData] = useState<
     Record<string, { src: string; fact: string }>
   >({});
 
+  // useEffect hook to load images on component mount
   useEffect(() => {
     (async () => {
       const images = await loadImages();

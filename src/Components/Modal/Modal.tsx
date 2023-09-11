@@ -7,30 +7,41 @@ interface ModalProps {
 }
 
 export function Modal({ setFirstName }: ModalProps) {
+  // state to hold the stage of the modal (1 or 2)
   const [state, setState] = useState(1);
+
+  // state to toggle the visibility of the modal
   const [modalVisible, setModalVisible] = useState(false);
+
+  // state to hold the form inputs
   const [formInputs, setFormInputs] = useState({
     fname: "",
     lname: "",
     email: "",
     ssn: "",
   });
+
+  // state to manage the button row style
   const [buttonRow, setRow] = useState(true);
 
+  // useEffect to display the modal after a set time
   useEffect(() => {
     const timer = setTimeout(() => {
       setModalVisible(true);
     }, 7000);
 
+    // cleanup the timer when the component is unmounted
     return () => {
       clearTimeout(timer);
     };
   }, []);
 
+  // if modal is not visible, do not render anything
   if (!modalVisible) {
     return null;
   }
 
+  // handler to update form inputs based on user input
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setFormInputs({
@@ -39,6 +50,7 @@ export function Modal({ setFirstName }: ModalProps) {
     });
   };
 
+  // handler to process form submission
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log(formInputs);
@@ -46,10 +58,12 @@ export function Modal({ setFirstName }: ModalProps) {
     setState(2);
   };
 
+  // handler to close the modal when a cookie button is clicked
   const handleCookieButtonClick = () => {
     setModalVisible(false);
   };
 
+  // if modal is not visible, do not render anything
   if (!modalVisible) {
     return null;
   }
