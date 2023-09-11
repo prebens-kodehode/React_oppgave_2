@@ -6,7 +6,7 @@
   width: 100%;
   height: 100dvh;
   background: hsla(0, 0%, 15%, 0.3);
-  backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(0.7rem);
 }
 
 .modalCard {
@@ -18,7 +18,7 @@
   gap: 2rem;
   text-align: center;
   text-shadow: 0.1rem 0.1rem 0.3rem hsla(0, 0%, 13%, 0.8);
-  box-shadow: 0.3rem 0.3rem 0.7rem hsla(0, 0%, 13%, 0.8);
+  box-shadow: 0 0 0.5rem hsla(0, 0%, 0%, 0.9);
 }
 
 .formWrapper {
