@@ -20,7 +20,7 @@ export function Modal({ setFirstName }: ModalProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setModalVisible(true);
-    }, 5000);
+    }, 7000);
 
     return () => {
       clearTimeout(timer);
