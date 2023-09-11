@@ -1,8 +1,8 @@
-#ZooTube 🐾
+# ZooTube 🐾
 
- **Welcome to ZooTube, a mesmerizing journey through the animal kingdom, showcasing amazing facts and splendid images of various creatures inhabiting our planet!
+ Welcome to ZooTube, a mesmerizing journey through the animal kingdom, showcasing amazing facts and splendid images of various creatures inhabiting our planet!
 
-##Features 🌟
+## Features 🌟
 
 - **Responsive Design: Whether you're browsing from a mobile device or a desktop, the visual and educational adventure remains seamless.
 - **Informative Cards: Each animal is presented through an interactive card, displaying a captivating image along with an intriguing fact, offering you a peek into the fascinating world of that animal.
