@@ -1,5 +1,6 @@
 #ZooTube 🐾
-Welcome to ZooTube, a mesmerizing journey through the animal kingdom, showcasing amazing facts and splendid images of various creatures inhabiting our planet!
+
+- Welcome to ZooTube, a mesmerizing journey through the animal kingdom, showcasing amazing facts and splendid images of various creatures inhabiting our planet!
 
 ##Features 🌟
 
